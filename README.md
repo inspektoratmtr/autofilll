@@ -35,3 +35,4 @@ This is the initial foundation, not yet a feature-complete Lightning Autofill re
 
 Never store passwords, authentication tokens, payment card data, or confidential government records in autofill rules. Chrome local storage is not encrypted.
 # autofilll
+# autofilll
