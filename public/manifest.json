@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Mataram Autofill",
+  "version": "0.1.0",
+  "description": "Local-first form autofill and browser productivity automation.",
+  "action": { "default_popup": "index.html", "default_title": "Mataram Autofill" },
+  "options_page": "options.html",
+  "background": { "service_worker": "background.js", "type": "module" },
+  "permissions": ["storage", "activeTab", "scripting", "contextMenus"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "run-autofill": {
+      "suggested_key": { "default": "Alt+Shift+F" },
+      "description": "Run Mataram Autofill on the current page"
+    }
+  }
+}
